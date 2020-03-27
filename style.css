@@ -1,0 +1,135 @@
+html,body {
+    height: 100%;
+    margin: 0;
+    background: #ccccff;
+    color: #333;
+    overflow-y: hidden;
+}
+
+#maan{
+    background-color: transparent;
+    height: 100px;
+    width: 100px;
+    margin-left: 20px;
+    border-radius: 50%;
+    box-shadow: -20px 10px white;
+    opacity: 1;
+}
+
+#zon {
+    background-color: #ff8c1a;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 5px #ff8c1a;
+    animation-timing-function: linear;
+}
+
+.container {
+    padding: 8px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.blok {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 10px;
+    opacity: 0.5;
+    margin: 8px 0px;
+}
+
+.B1 {
+    justify-content: left;
+    flex: 0 1 auto;
+}
+
+.B2 {
+    flex: 0 1 auto;
+}
+
+.B3 {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+}
+
+#klok {
+    text-align: center;
+    font-size: 90px;
+    font-family: Baskerville, Georgia;
+}
+
+@keyframes zonsondergang {
+    100% {
+        transform: translateY(500px);
+    }
+}
+
+@keyframes lucht {
+    50% {
+        background-color: #ffd700;
+    }
+
+    65% {
+        background-color: #ffb90f;
+    }
+
+    85% {
+        background-color: #b39800;
+    }
+
+    100% {
+        background-color: #68228b;
+    }
+}
+
+@keyframes nacht {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes licht {
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*Hieronder de stijl voor medium grote aparaten, denk aan tablet*/
+@media (min-width: 700px) {
+    #maan {
+        height: 200px;
+        width: 200px;
+        margin-left: 40px;
+        box-shadow: -40px 10px white;
+        border-radius: 50%;
+    }
+}
+/*Hieronder de stijl voor grote aparaten, denk aan laptop/desktop*/
+@media (min-width: 1000px) {
+    .B1 {
+        justify-content: center;
+    }
+}
+/*Hieronder de stijl voor nog grote aparaten, denk aan grote ruimteschermen*/
+@media (min-width: 1400px) {
+    #maan {
+        height: 200px;
+        width: 200px;
+        margin-left: 44px;
+        box-shadow: -50px 10px white;
+    }
+
+    #zon {
+        height: 220px;
+        width: 220px;
+    }
+}
